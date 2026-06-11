@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4 py-3">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                Home
+            </a>
+
+            <!-- BOTÃO MOBILE -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarConteudo">
+
+                <div class="navbar-nav">
+
+                    <a class="nav-link fw-bold text-primary" href="portifolio.html">
+
+                        Portfólio
+                    </a>
+
+                    <a class="nav-link fw-bold text-primary" href="contato.html">
+
+                        Contato
+                    </a>
+
+                </div>
+
+                <!-- NOTIFICAÇÃO -->
+                <button type="button" class="btn btn-dark position-relative px-4 py-2 rounded-4 fs-6 mt-3 mt-lg-0">
+
+                    <i class="fa-regular fa-bell"></i>
+                    Notificações
+
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                        99+
+
+                    </span>
+
+                </button>
+
+            </div>
+    </nav>
+
+    <div class="container my-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8 col-md-10">
+
+                <div class="card shadow border-0">
+
+                    <div class="card-body p-5">
+
+                        <h2 class="text-center fw-bold mb-3">
+                            Proposta de Contratação
+                        </h2>
+
+                        <p class="text-center text-muted mb-4">
+                            Preencha os dados abaixo para entrar em contato.
+                        </p>
+
+                        <form id="formContato">
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Nome do Recrutador</label>
+                                    <input type="text" class="form-control" id="nome">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Empresa</label>
+                                    <input type="text" class="form-control" id="empresa">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">E-mail Corporativo</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="telefone">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Cargo / Vaga</label>
+                                    <input type="text" class="form-control" id="vaga">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Tipo de Contratação</label>
+                                    <select class="form-select" id="contratacao">
+                                        <option>Selecione...</option>
+                                        <option>CLT</option>
+                                        <option>PJ</option>
+                                        <option>Estágio</option>
+                                        <option>Freelancer</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Modalidade</label>
+                                    <select class="form-select" id="modalidade">
+                                        <option>Selecione...</option>
+                                        <option>Presencial</option>
+                                        <option>Híbrido</option>
+                                        <option>Remoto</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Faixa Salarial</label>
+                                    <input type="text" class="form-control" id="salario">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Cidade / Estado</label>
+                                    <input type="text" class="form-control" id="cidade">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Data Prevista para Início</label>
+                                    <input type="date" class="form-control" id="inicio">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Descrição da Vaga</label>
+                                <textarea class="form-control" id="descricao" rows="4"></textarea>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Mensagem Adicional</label>
+                                <textarea class="form-control" id="mensagem" rows="4"></textarea>
+                            </div>
+
+                            <button type="button" class="btn btn-primary w-100 py-3 fw-bold" onclick="enviarEmail()">
+
+                                Enviar Proposta
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function enviarEmail() {
+
+            const nome = document.getElementById('nome').value;
+            const empresa = document.getElementById('empresa').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const vaga = document.getElementById('vaga').value;
+            const contratacao = document.getElementById('contratacao').value;
+            const modalidade = document.getElementById('modalidade').value;
+            const salario = document.getElementById('salario').value;
+            const cidade = document.getElementById('cidade').value;
+            const inicio = document.getElementById('inicio').value;
+            const descricao = document.getElementById('descricao').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const emailDestino = "saulomartins.junio@gmail.com";
+
+            const assunto = encodeURIComponent(
+                `Proposta de Contratação - ${vaga}`
+            );
+
+            const corpoEmail = encodeURIComponent(
+                `DADOS DO RECRUTADOR
+
+Nome: ${nome}
+Empresa: ${empresa}
+E-mail: ${email}
+Telefone: ${telefone}
+
+DADOS DA VAGA
+
+Cargo: ${vaga}
+Tipo de Contratação: ${contratacao}
+Modalidade: ${modalidade}
+Faixa Salarial: ${salario}
+Cidade/Estado: ${cidade}
+Data de Início: ${inicio}
+
+DESCRIÇÃO DA VAGA
+
+${descricao}    
+
+MENSAGEM ADICIONAL
+
+${mensagem}`
+            );
+
+            const urlGmail =
+                `https://mail.google.com/mail/?view=cm&fs=1&to=${emailDestino}&su=${assunto}&body=${corpoEmail}`;
+
+            window.open(urlGmail, '_blank');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
