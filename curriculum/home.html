@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ÍCONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Profile</title>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4 py-3">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                Home
+            </a>
+
+            <!-- BOTÃO MOBILE -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarConteudo">
+
+                <div class="navbar-nav">
+
+                    <a class="nav-link fw-bold text-primary" href="portifolio.html">
+
+                        Portfólio
+                    </a>
+
+                    <a class="nav-link fw-bold text-primary" href="contato.html">
+
+                        Contato
+                    </a>
+
+                </div>
+
+                <!-- NOTIFICAÇÃO -->
+                <button type="button" class="btn btn-dark position-relative px-4 py-2 rounded-4 fs-6 mt-3 mt-lg-0">
+
+                    <i class="fa-regular fa-bell"></i>
+                    Notificações
+
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                        99+
+
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+        <form class="d-flex  ">
+            <input type="text" class="form-control me-2" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+        </form>
+
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <div class="container-fluid mt-4">
+
+        <!-- DROPDOWN + SOBRE MIM -->
+        <div class="d-flex align-items-center gap-3 mt-3 ms-3">
+
+            <!-- DROPDOWN -->
+            <div class="dropdown">
+
+                <button class="btn btn-secondary dropdown-toggle px-2 py-1 rounded-4 fs-6" type="button"
+                    data-bs-toggle="dropdown">
+
+                    Menu Dropdown
+                </button>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a class="dropdown-item" href="portifolio.html">
+                            Portifólio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="contato.html ">
+                            Fale Conosco!
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SOBRE MIM -->
+            <div>
+
+                <button class="btn btn-danger px-3 py-1 rounded-3 ms-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sobreMim">
+
+                    Sobre mim
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TEXTO SOBRE MIM -->
+        <div class="collapse mt-3" id="sobreMim">
+
+            <div class="card card-body shadow mx-auto" style="max-width: 1100px;">
+
+                Sou uma pessoa que tem bastante interesse nas coisas,
+                sou curioso pra aprender, sei dirigir bem, sou educado,
+                e para o que precisarem, eu estarei disposto.
+
+            </div>
+
+        </div>
+
+        <!-- BOTÃO VER PERFIL -->
+        <div class="text-center mt-5">
+
+            <button class="btn btn-primary px-5 py-3 rounded-4 shadow fs-5" data-bs-toggle="modal"
+                data-bs-target="#perfilModal">
+
+                Ver Perfil
+
+            </button>
+
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal fade" id="perfilModal" tabindex="-1">
+
+            <div class="modal-dialog modal-dialog-centered">
+
+                <div class="modal-content rounded-4">
+
+                    <!-- HEADER -->
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">
+                            Meu Perfil
+                        </h5>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+
+                        </button>
+
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body text-center">
+
+                        <!-- IMAGEM -->
+                        <img src="foto_do_gostosão.jpg" class="img-fluid rounded-4 shadow mb-3" alt="Imagem Perfil">
+
+                        <!-- TEXTO -->
+                        <p class="fs-5">
+
+                            Olá! Esse é meu perfil.
+                            Sou o Saulo, faço técnico em desenvolvimento de sistemas, gosto muito do curso!
+                            Sou Proativo. Gosto de trabalhar em grupos.
+                            Respeito tudo e todos!
+                        </p>
+
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+
+                            Fechar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- accordion -->
+        <div class="accordion mt-5" id="accordionExample">
+
+            <!-- ITEM 1 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+
+                        Experiência Profissional
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+
+                        Registro empregatício vinculado com a Usina Açucarada de São Manoel S.A. 
+                        Atribuições: Desenvolvimentos Front e Back-end; manipulação com Banco de Dados; prototipagem e elaboração de projetos na escola técnica SENAI;
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 2 -->
+            
+               <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo">
+
+                        Experiência Profissional
+
+                    </button>
+
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+
+                      Soft Skills: Proativo; Credibilidade; Confiança; Responsabilidade.
+                      Hard Skills:   HTML; CSS; Bootstrap 5; JavaScript; Python; Flask; Git e GitHub
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree">
+
+                        Formação
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+
+                              Em conclusão do curso técnico em desenvolvimento de sistemas no senai-sp de Botucatu.
+                              Em conclusão do ensino médio escolar.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+ <footer class="bg-dark text-center text-white mt-auto p-5">
+
+    <button
+        type="button"
+        class="btn btn-outline-primary px-5 py-3 fs-5 rounded-3"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="saulomartins.junio@gmail.com">
+
+        Informações para Contato
+
+    </button>
+
+</footer>
+
+<script>
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(
+    tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+);
+</script>
+
+</body>
+
+</html>
