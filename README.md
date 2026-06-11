@@ -1,2 +1,2 @@
-# cvonline
+# corriculumonline
 Projeto de Curriculum Online destinado a pleitear vagas.
